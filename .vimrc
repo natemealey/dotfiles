@@ -10,6 +10,9 @@ set cc=80
 "set up spell checker
 set spelllang=en
 
+"make it so mode changes are instant
+set ttimeout ttimeoutlen=0
+
 "set up mouse bindings fuck the haters
 set mouse=a
 map <ScrollWheelUp> 3<C-Y>
@@ -42,6 +45,16 @@ nnoremap k gk
 nnoremap j gj
 nnoremap gk k
 nnoremap gj j
+
+"enable bash-like autocompletion (w/added cycling options on 3+ tabs)
+set wildmode=longest,list,full
+set wildmenu
+
+"make it so capital W saves
+command W w
+command Wq wq
+command WQ wq
+command Q q
 
 "modify search keys to center the result
 nnoremap n nzz
